@@ -686,6 +686,7 @@ a {
    .header {
     background-color: #242323d3;
     display: none; /* Hide links by default */
+    text-align: center;
    }
 
    .header.active {
