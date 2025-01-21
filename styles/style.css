@@ -15,7 +15,7 @@ body {
 /* background container */
 
 .background-container {
-    background: url('https://imgur.com/NCARFXA') center/cover no-repeat;
+    background: url('/assets/images/hero-background.jpg') center/cover no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0px;
@@ -434,7 +434,7 @@ text-align: center;
 /* contact */
 
 .contact {
-    background-image: url('');
+    background-image: url('assets/images/modern-house-lighting.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
