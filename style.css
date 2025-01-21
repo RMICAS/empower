@@ -669,9 +669,11 @@ a {
    }
 
    /* Hamburger Icon */
-#hamburger {
+#toggleButton {
     font-size: 1.5rem; /* Adjust size */
-    color: white;
+    color: #ffffff;
+    background-color: #00000000;
+    border-style: none;
     cursor: pointer;
     position: absolute;
     left: 0;
@@ -682,18 +684,19 @@ a {
 }
 
    .header {
-    background-color: #24232383;
+    background-color: #242323d3;
+    display: none; /* Hide links by default */
    }
+
+   .header.active {
+    display: flex;
+  }
 
    .header .container .nav ul {
     display: flex;
     flex-direction: column;
-    display: none; /* Hide links by default */
+    
    }
-
-   .header .container .nav ul.active {
-    display: flex; /* Show links when active */
-}
 
    .header .container .nav ul li {
     margin-top: 10px;
@@ -996,7 +999,7 @@ a {
         display: none;
     }
 
-    #hamburger {
+    #toggleButton {
         display: none;
     }
 

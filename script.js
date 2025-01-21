@@ -1,19 +1,3 @@
-// hamburger
-
-    document.getElementById('menu-icon').addEventListener('click', () => {
-        alert('Menu icon clicked!');
-    });
-
-
-    // Select hamburger icon and navigation links
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav');
-
-// Toggle 'active' class when the hamburger is clicked
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
 
 // projects
 
@@ -29,3 +13,12 @@ function toggleTeam() {
         button.textContent = 'ALL PROJECTS';
     }
 }
+
+// nabar
+
+const toggleButton = document.getElementById('toggleButton');
+const menu = document.getElementById('header');
+
+toggleButton.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
