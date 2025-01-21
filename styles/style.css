@@ -10,13 +10,12 @@ body {
     font-family: 'roboto';
     margin: 0px;
     padding: 0px;
-
 }
 
 /* background container */
 
 .background-container {
-    background-image: url(/assets/images/hero-background.jpg);
+    background: url('https://imgur.com/NCARFXA') center/cover no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0px;
@@ -435,7 +434,7 @@ text-align: center;
 /* contact */
 
 .contact {
-    background-image: url(/assets/images/modern-house-lighting.jpg);
+    background-image: url('https://imgur.com/a/C9e1p7w');
     background-repeat: no-repeat;
     background-size: cover;
 }
