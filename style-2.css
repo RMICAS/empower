@@ -1,0 +1,175 @@
+/* Universal Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #FF5733;
+    --secondary-color: #2C3E50;
+    --accent-color: #E74C3C;
+    --background-color: #FAF3E0;
+    --text-color: #2C3E50;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+/* Flexbox Fixes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Background Container */
+.background-container {
+    background: url('assets/images/hero-background.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header Top */
+.header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.header-top .logo {
+    width: 100px;
+}
+
+/* Main Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #ECF0F1;
+}
+
+/* Navigation Styles */
+header .nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header .nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 15px;
+    text-transform: uppercase;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #fff;
+}
+
+.hero .btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+/* Service Cards */
+.service-card,
+.service-card-2 {
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover,
+.service-card-2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* About Us */
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    background-color: var(--background-color);
+}
+
+.about-us img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+/* Team Section */
+.team .team-grid .team-item img {
+    border-radius: 20px;
+}
+
+/* Contact Section */
+.contact {
+    background: url('assets/images/modern-house-lighting.jpg') center/cover no-repeat;
+    padding: 50px 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .hero-content {
+        margin: 0;
+    }
+
+    .about-us {
+        flex-direction: column;
+    }
+}

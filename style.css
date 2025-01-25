@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 :root {
     --primary-color: #FF5733; /* Orange */
     --secondary-color: #2C3E50; /* Dark Blue */
@@ -28,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-color: #00000065;
+    background-color: #0000009c;
 
     .logo {
         width: 100px;
@@ -48,6 +54,7 @@ header {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-color:#ECF0F1;
+    background-color: #00000065;;
 
     .container {
 
@@ -76,6 +83,10 @@ header {
 /* hero section */
 
 .hero {
+    background-color: #00000065;
+}
+
+.hero {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -91,6 +102,7 @@ header {
             text-transform: uppercase;
             font-size: 40px;
             margin-top: 0px;
+            margin-bottom: 20px;
             color: #ffffff;
         }
 
@@ -107,18 +119,29 @@ header {
             font-weight: bold;
             border-radius: 10px;
             border-style: none;
+            cursor: pointer;
         
         }
     }
     
     .hero-image-right {
+
+        display: inline-block;
+        overflow: hidden;
+        width: 400px;
+        height: 400px;
         
         img {
-            width: 400px;
+            width: 90%;
+            height: 90%;
+            transition: transform 0.3s ease-in-out;
         }
     }
-}
 
+    .hero-image-right img:hover {
+        transform: scale(1.1);
+}
+}
 /* products and services */
 
 .services-section {
@@ -174,7 +197,7 @@ header {
     border-style: var(--secondary-color);
     border-width: 1px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 245px;
+    width: 256px;
     height: 220px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -230,6 +253,7 @@ header {
 
     h1, h2, p {
         color: var(--text-color);
+        margin-bottom: 20px;
     }
 
     p {
@@ -264,7 +288,7 @@ header {
                     
                     width: 15px;
                     margin-right: 10px;
-                    padding-top: 5px;
+                    padding-top: 10px;
                 }
             }
 
@@ -273,7 +297,7 @@ header {
                     
                     width: 15px;
                     margin-right: 10px;
-                    padding-top: 5px;
+                    padding-top: 10px;
                 }
             }
         }
@@ -314,13 +338,16 @@ header {
         }
 
         img {
-            width: 100px;
-            height: 100px;
-            margin-top: 20px;
+            width: 90px;
+            height: 90px;
+            margin-top: 25px;
+            margin-right: 10px;
+         
         }
 
         .intro-text {
             margin-right: 150px;
+            margin-top: 30px;
     
         }
 
@@ -357,7 +384,7 @@ text-align: center;
 .projects {
     .container {
         text-align: center;
-        margin-top: 10px;
+        margin-top: 30px;
 
         .section-title {
             margin-bottom: 30px;
@@ -382,6 +409,21 @@ text-align: center;
                 margin-top: 20px;
                 margin-left: 20px;
                 margin-right: 20px;
+                padding-top: 40px;
+
+                h3 {
+                    font-size: 25px;
+                    text-transform: uppercase;
+                    font-size: 1.2em;
+                    color: #333;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    color: #333;
+                    font-size: 18px;
+                    text-align: justify;
+                }
 
             }
         }
@@ -427,6 +469,12 @@ text-align: center;
 
         h2 {
             font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        p {
+            line-height: 1.5;
         }
     }
 }
@@ -443,7 +491,7 @@ text-align: center;
 
     display: flex;
     flex-direction: row;
-    background-color: #6464646b;
+    background-color: #0000009c;
     
 
     .contact-form {
@@ -452,7 +500,6 @@ text-align: center;
         form {   
             background-color: #ffffff;
             padding: 60px;
-            padding-top: 5px;
             border-radius: 20px;
             display: flex;
             flex-direction: column;
@@ -483,6 +530,7 @@ text-align: center;
     form h2 {
         font-size: 40px;
         font-weight: bold;
+        margin-bottom: 20px;
         color: var(--text-color);
     }
 
@@ -492,11 +540,15 @@ text-align: center;
         h2 {
             font-size: 42px;
             color: #ffff;
+            margin-top: 45px;
+            margin-bottom: 10px;
         }
 
         p {
             color: #ffff;
             font-size: 25px;
+            line-height: 1.5;
+            margin-bottom: 10px;
         }
     }
 }
@@ -509,18 +561,20 @@ text-align: center;
     padding: 5px;
     border-width: 0px;
     border-radius: 20px;
+    padding-right: 20px;
 }
 
 .contact-text .btn-list .btn-item p {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     color: #333;
     margin: 3px;
     padding-top: 5px;
+    
 }
 
 .contact-text .btn-list .btn-item img {
-    width: 20px;
+    width: 37px;
     background-color: #ffff;
     padding: 10px;
     margin: 0px;
@@ -1005,6 +1059,89 @@ a {
     }
 
 }
+
+@media (max-width: 1192px) {
+
+.hero {
+    padding-left: 70px;
+}
+
+.hero .hero-image-right img {
+    width: 400px;
+    padding-right: 100px;
+}
+
+.about-us .container {
+    margin-right: 50px;
+} 
+.about-us .container .image-container img {
+    width: 200px;
+}
+
+.about-us .about-features ul.ul-left {
+
+   li {
+    font-size: 10px;
+   }
+}
+
+
+/* brands */
+
+.brands .container .brand-logos {
+            
+    img {
+       
+        margin-right: 20px;
+        margin-top: 20px;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.team .container .team-grid {
+
+    .team-item {
+        img {
+            width: 290px;
+            margin: 20px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            border-radius: 20px;
+        }
+}
+
+}
+
+
+/* products and services */
+
+
+.service-card {
+
+    width: 250px;
+    height: 260px;
+
+}
+
+.service-card-2 {
+    padding: 20px;
+    padding-bottom: 60px;
+    margin-top: 35px;
+    width: 180px;
+    height: 270px;
+
+}
+
+.projects .container .sdg-7 .sdg-7-text {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+}
+
+
 
 
 

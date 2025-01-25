@@ -10,7 +10,7 @@ function toggleTeam() {
         button.textContent = 'SHOW LESS';
     } else {
         teamSection.style.display = 'none';
-        button.textContent = 'ALL PROJECTS';
+        button.textContent = 'MORE PROJECTS';
     }
 }
 
