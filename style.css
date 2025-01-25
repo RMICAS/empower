@@ -108,6 +108,13 @@ header {
 
         p {
             color: #ffff;
+            font-size: 25px;
+            font-weight: bolder;
+            text-decoration: underline;
+            text-decoration-color: #FF5733;
+            text-underline-offset: 8px;
+            margin-bottom: 20px;
+
         }
 
         .btn-primary {
@@ -764,6 +771,11 @@ a {
     display: none;
    }
 
+   section#home.hero {
+    padding-left: 0px;
+    padding-top: 30px;
+   }
+
    .hero .hero-content {
     text-align: center;
     margin: 0px;
@@ -790,6 +802,10 @@ a {
     height: 250px;
     margin-top: 0px;
    
+   }
+
+   .services-section .service-card {
+    width: 350px;
    }
 
    .services-section .service-card-2 .service-2-icon {
@@ -911,6 +927,12 @@ a {
    .team .container .team-grid {
     display: flex;
     flex-direction: column;
+   }
+
+   .team .container .team-grid {
+    .team-item {
+        margin-top: 10px;
+    }
    }
 
    /* contact */
