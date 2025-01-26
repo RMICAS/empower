@@ -10,10 +10,9 @@ function toggleTeam() {
         button.textContent = 'SHOW LESS';
     } else {
         teamSection.style.display = 'none';
-        button.textContent = 'MORE PROJECTS';
+        button.innerHTML = '<span class="plus-sign">+</span> PROJECTS';
     }
 }
-
 // nabar
 
 const toggleButton = document.getElementById('toggleButton');

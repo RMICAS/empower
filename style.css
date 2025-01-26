@@ -451,6 +451,13 @@ text-align: center;
     }
 }
 
+.more-projects .toggle-btn .plus-sign {
+    font-size: 19px; /* Adjust size as needed */
+    margin-right: 5px;
+    font-weight: bold; /* Optional for making it stand out */
+}
+
+
 /* TEAM */
 
 .team .container {
