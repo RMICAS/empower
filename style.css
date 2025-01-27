@@ -21,6 +21,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-image: url(hero-background.jpg);
+    background-size: 100%
 }
 
 /* background container */
