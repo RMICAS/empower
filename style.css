@@ -12,6 +12,10 @@
     --text-color: #2C3E50; /* Dark Blue */
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     font-family: 'roboto';
     margin: 0px;
@@ -26,6 +30,7 @@ body {
     background-repeat: no-repeat;
     margin: 0px;
     padding: 0px;
+    
 }
 
 /* header top */
@@ -54,7 +59,19 @@ header {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-color:#ECF0F1;
-    background-color: #00000065;;
+    background-color: #00000065;
+    position: sticky;
+    top: 0;
+    z-index: 9999; /* Ensures it stays on top of other content */
+    transition: background-color 0.3s ease;
+
+    /* Scrolled Header Style */
+header.scrolled {
+    background-color: #007bff; /* Change to your desired color */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a stronger shadow */
+  }
+    
 
     .container {
 
