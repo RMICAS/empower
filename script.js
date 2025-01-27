@@ -10,7 +10,7 @@ function toggleTeam() {
         button.textContent = 'SHOW LESS';
     } else {
         teamSection.style.display = 'none';
-        button.innerHTML = '<span class="plus-sign">+</span> PROJECTS';
+        button.innerHTML = '<span class="plus-sign">+</span> FOR MORE PROJECTS';
     }
 }
 // nabar
