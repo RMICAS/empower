@@ -768,6 +768,10 @@ a {
   
     /* header top */
 
+    body {
+        background-image: none;
+    }
+
     .header-top {
         .logo {
             width: 60px;
@@ -813,6 +817,17 @@ a {
    }
 
    /* hero */
+
+   .header-top {
+    background-color: #333333ee;
+    
+   }
+
+   .hero {
+    background-image: url(hero-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
 
    .hero .hero-image-right {
     display: none;
@@ -872,7 +887,7 @@ a {
     margin-right: 50px;
    }
 
-   .about-us .image-container img {
+   .about-us img {
     display: none;
    }
 
