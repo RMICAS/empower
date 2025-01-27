@@ -20,18 +20,23 @@ body {
     font-family: 'roboto';
     margin: 0px;
     padding: 0px;
+    background-image: url(hero-background.jpg);
 }
 
 /* background container */
 
 .background-container {
-    background: url('assets/images/hero-background.jpg') center/cover no-repeat;
+
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0px;
     padding: 0px;
     
 }
+
+/* full-header */
+
+
 
 /* header top */
 
@@ -40,6 +45,7 @@ body {
     justify-content: center;
     padding: 10px;
     background-color: #0000009c;
+    
 
     .logo {
         width: 100px;
@@ -65,13 +71,6 @@ header {
     z-index: 9999; /* Ensures it stays on top of other content */
     transition: background-color 0.3s ease;
 
-    /* Scrolled Header Style */
-header.scrolled {
-    background-color: #007bff; /* Change to your desired color */
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a stronger shadow */
-  }
-    
 
     .container {
 
@@ -351,7 +350,10 @@ header.scrolled {
 
 .brands {
 
-    margin-top: 20px;
+    background-color: #ffffff;
+    
+
+    padding-top: 20px;
 
     .container {
         
@@ -408,9 +410,11 @@ text-align: center;
 }
 
 .projects {
+
+    background-color: #ffffff;
     .container {
         text-align: center;
-        margin-top: 30px;
+        padding-top: 30px;
 
         .section-title {
             margin-bottom: 30px;
@@ -469,20 +473,27 @@ text-align: center;
         }
     }
 }
-
+.more-projects {
+    background-color: #ffffff;
+}
 .more-projects .toggle-btn .plus-sign {
     font-size: 19px; /* Adjust size as needed */
     margin-right: 5px;
     font-weight: bold; /* Optional for making it stand out */
+    
 }
 
 
 /* TEAM */
 
+.team {
+    background-color: #ffffff;
+}
+
 .team .container {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 
