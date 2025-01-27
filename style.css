@@ -72,6 +72,7 @@ header {
     transition: background-color 0.3s ease;
 
 
+
     .container {
 
         .nav {
@@ -95,6 +96,15 @@ header {
         }
     }
 }
+
+
+    /* Scrolled Header Style */
+    header.scrolled {
+        background-color: #202020f3; /* Change to your desired color */
+        color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a stronger shadow */
+      }
+    
 
 /* hero section */
 
