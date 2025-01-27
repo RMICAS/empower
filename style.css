@@ -265,7 +265,7 @@ header {
 
     p {
         line-height: 1.5;
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .container {
@@ -325,7 +325,7 @@ header {
     }
 
     img {
-        width: 550px;
+        width: 560px;
     }
 }
 
@@ -429,7 +429,7 @@ text-align: center;
 
                 p {
                     color: #333;
-                    font-size: 18px;
+                    font-size: 17px;
                     text-align: justify;
                 }
 
@@ -899,7 +899,8 @@ a {
   .carousel img {
     width: 20%; /* Adjusted to show 4 images */
     flex-shrink: 0;
-    object-fit: cover;
+    object-fit: fill;
+    padding: 5px;
     scroll-snap-align: start; /* Snap each image */
   }
 
