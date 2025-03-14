@@ -59,3 +59,23 @@ function applyThemeBasedOnHash() {
 window.onload = applyThemeBasedOnHash;
 window.onhashchange = applyThemeBasedOnHash;
 
+
+// theme swithcer
+
+    window.onload = function () {
+        const savedTheme = localStorage.getItem('selectedTheme');
+        if (savedTheme) {
+            document.body.classList.add(savedTheme);
+        }
+
+        const variables = ['--primary-color', '--secondary-color', '--tertiary-color', '--background-color', '--navbar-background-color', '--navbar-scroll', '--text-color', '--card-hover'];
+        variables.forEach(variable => {
+            const savedValue = localStorage.getItem(variable);
+            if (savedValue) {
+                document.documentElement.style.setProperty(variable, savedValue);
+            }
+        });
+    };
+
+
+

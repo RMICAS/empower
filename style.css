@@ -12,7 +12,7 @@
     --tertiary-color: #11b8d8; /* Red */
     --background-color: #FAF3E0; /* Light Grey */
     --navbar-background-color: #00000093; /* black */
-    --navbar-scroll:var(--primary-color);
+    --navbar-scroll:#df8200;
     --text-color: #090c1b; /* Dark Blue */
     --card-hover: #50b730;
 }

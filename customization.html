@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customization</title>
+    <style>
+        :root {
+            --primary-color: #df8200;
+            --secondary-color: #50b730;
+            --tertiary-color: #11b8d8;
+            --background-color: #FAF3E0;
+            --navbar-background-color: #00000093;
+            --navbar-scroll: #df820091;
+            --text-color: #090c1b;
+            --card-hover: #50b730;
+        }
+
+        .theme-2 {
+            --primary-color: #df8200;
+            --secondary-color: #11b8d8;
+            --tertiary-color: #11b8d8;
+            --background-color: #FAF3E0;
+            --navbar-background-color: #4141419c;
+            --navbar-scroll: #11b8d8;
+            --text-color: #292928;
+            --card-hover: #11b8d8;
+        }
+
+        .theme-3 {
+            --primary-color: #df8200;
+            --secondary-color: #ff5733;
+            --tertiary-color: #11b8d8;
+            --background-color: #FAF3E0;
+            --navbar-background-color: #6463639c;
+            --navbar-scroll: #090c1b;
+            --text-color: #090c1b;
+            --card-hover: #faf3e0;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .selected {
+            border: 2px solid black;
+            background-color: #50b730;
+        }
+
+        .color-picker {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customization</h1>
+    <button class="btn" id="btn-theme-1" onclick="changeTheme('theme-1')">Default Theme</button>
+    <button class="btn" id="btn-theme-2" onclick="changeTheme('theme-2')">Theme 2</button>
+    <button class="btn" id="btn-theme-3" onclick="changeTheme('theme-3')">Theme 3</button>
+
+    <h2>Customize Colors</h2>
+    <label>Primary Color: <input type="color" class="color-picker" id="primaryColor" oninput="changeCustomColor('--primary-color', this.value)"></label>
+    <label>Secondary Color: <input type="color" class="color-picker" id="secondaryColor" oninput="changeCustomColor('--secondary-color', this.value)"></label>
+    <label>Tertiary Color: <input type="color" class="color-picker" id="tertiaryColor" oninput="changeCustomColor('--tertiary-color', this.value)"></label>
+    <label>Background Color: <input type="color" class="color-picker" id="backgroundColor" oninput="changeCustomColor('--background-color', this.value)"></label>
+    <label>Navbar Background: <input type="color" class="color-picker" id="navbarBackground" oninput="changeCustomColor('--navbar-background-color', this.value)"></label>
+    <label>Navbar Scroll: <input type="color" class="color-picker" id="navbarScroll" oninput="changeCustomColor('--navbar-scroll', this.value)"></label>
+    <label>Text Color: <input type="color" class="color-picker" id="textColor" oninput="changeCustomColor('--text-color', this.value)"></label>
+    <label>Card Hover Color: <input type="color" class="color-picker" id="cardHover" oninput="changeCustomColor('--card-hover', this.value)"></label>
+
+    <div class="btn">
+
+    <button class="btn" onclick="resetColors()">Reset Colors</button>
+
+    </div>
+
+
+    <script>
+        function changeTheme(theme) {
+            document.body.classList.remove('theme-2', 'theme-3');
+            if (theme !== 'theme-1') {
+                document.body.classList.add(theme);
+            }
+            localStorage.setItem('selectedTheme', theme);
+
+            document.querySelectorAll('.btn').forEach(button => {
+                button.classList.remove('selected');
+            });
+            document.getElementById(`btn-${theme}`).classList.add('selected');
+
+            setTimeout(() => {
+                window.open('index.html', '_blank');
+            }, 500);
+        }
+
+        function changeCustomColor(variable, color) {
+            document.documentElement.style.setProperty(variable, color);
+            localStorage.setItem(variable, color);
+        }
+
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'theme-1';
+            changeTheme(savedTheme);
+
+            const variables = ['--primary-color', '--secondary-color', '--tertiary-color', '--background-color', '--navbar-background-color', '--navbar-scroll', '--text-color', '--card-hover'];
+            variables.forEach(variable => {
+                const savedValue = localStorage.getItem(variable);
+                if (savedValue) {
+                    document.documentElement.style.setProperty(variable, savedValue);
+                }
+            });
+        };
+
+        
+    </script>
+
+    <script>
+    function resetColors() {
+        localStorage.clear();
+        location.reload(); // Reload the page to apply default colors
+    }
+    </script>
+</body>
+</html>
