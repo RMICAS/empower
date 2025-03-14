@@ -4,13 +4,54 @@
     box-sizing: border-box;
   }
 
+/* default */
+
 :root {
-    --primary-color: #FF5733; /* Orange */
-    --secondary-color: #2C3E50; /* Dark Blue */
-    --accent-color: #E74C3C; /* Red */
+    --primary-color: #df8200; /* Orange */
+    --secondary-color: #50b730; /* Dark Blue */
+    --tertiary-color: #11b8d8; /* Red */
     --background-color: #FAF3E0; /* Light Grey */
-    --text-color: #2C3E50; /* Dark Blue */
+    --navbar-background-color: #00000093; /* black */
+    --navbar-scroll:var(--primary-color);
+    --text-color: #090c1b; /* Dark Blue */
+    --card-hover: #50b730;
 }
+
+/* theme 2 */
+    .theme-2 {
+    --primary-color: #df8200; /* Orange */
+    --secondary-color: #11b8d8; /* light green */
+    --tertiary-color: #11b8d8; /* blue */
+    --background-color: #FAF3E0; /* Light Grey */
+    --navbar-background-color: #4141419c; /* black */
+    --navbar-scroll: #11b8d8;
+    --text-color: #292928; /* Dark Blue */
+    --card-hover: #11b8d8;
+    }
+
+/* theme 3 */
+.theme-3 {
+    --primary-color: #df8200; /* Orange */
+    --secondary-color: #ff5733; /* light green */
+    --tertiary-color: #11b8d8; /* blue */
+    --background-color: #FAF3E0; /* Light Grey */
+    --navbar-background-color: #6463639c; /* black */
+    --navbar-scroll: #090c1b;
+    --text-color: #090c1b; /* Dark Blue */
+    --card-hover: #faf3e0;;
+    }
+
+/* theme 4 */
+.theme-4 {
+    --primary-color: #f48d00; /* Orange */
+    --secondary-color: #50b730; /* light green */
+    --tertiary-color: #11b8d8; /* blue */
+    --background-color: #FAF3E0; /* Light Grey */
+    --navbar-background-color: #6463639c; /* black */
+    --navbar-scroll: #000000cb;
+    --text-color: #090c1b; /* Dark Blue */
+    }
+
 
 html {
     scroll-behavior: smooth;
@@ -20,8 +61,9 @@ body {
     font-family: 'roboto';
     margin: 0px;
     padding: 0px;
-    background-image: url(hero-background.jpg);
-    background-size: 100%
+    background-image: url(hero-background.png);
+    background-size: 100%;
+    
 }
 
 /* background container */
@@ -32,6 +74,7 @@ body {
     background-repeat: no-repeat;
     margin: 0px;
     padding: 0px;
+    background-color: #ffffff13;
     
 }
 
@@ -45,7 +88,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-color: #0000009c;
+    background-color: var(--navbar-background-color);
     
 
     .logo {
@@ -66,7 +109,7 @@ header {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-color:#ECF0F1;
-    background-color: #00000065;
+    background-color: var(--navbar-background-color);
     position: sticky;
     top: 0;
     z-index: 9999; /* Ensures it stays on top of other content */
@@ -101,8 +144,8 @@ header {
 
     /* Scrolled Header Style */
     header.scrolled {
-        background-color: #202020f3; /* Change to your desired color */
-        color: white;
+        background-color: var(--navbar-scroll); /* Change to your desired color */
+        color: var(--text-color); 
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a stronger shadow */
       }
     
@@ -138,7 +181,7 @@ header {
             font-size: 25px;
             font-weight: bolder;
             text-decoration: underline;
-            text-decoration-color: #FF5733;
+            text-decoration-color: var(--primary-color);
             text-underline-offset: 8px;
             margin-bottom: 20px;
 
@@ -154,7 +197,13 @@ header {
             border-radius: 10px;
             border-style: none;
             cursor: pointer;
+            
         
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transition: all 0.3s ease;
         }
     }
     
@@ -174,6 +223,7 @@ header {
 
     .hero-image-right img:hover {
         transform: scale(1.1);
+        transition: ease-in-out;
 }
 }
 /* products and services */
@@ -218,7 +268,7 @@ header {
     border-width: 1px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 350px;
-    height: 250px;
+    height: 300px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -241,6 +291,8 @@ header {
 .service-card:hover, .service-card-2:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--card-hover);
+    transition: all 0.3s ease;
 }
 
 .service-icon {
@@ -252,6 +304,7 @@ header {
     padding: 10px;
     border-radius: 50%;
 }
+
 
 .service-2-icon {
     width: 50px;
@@ -265,15 +318,17 @@ header {
 
 .service-title {
     font-size: 1.2em;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 15px;
     text-transform: uppercase;
 }
 
+
 .service-description {
     font-size: 1em;
-    color: #666;
+    color: var(--text-color);
 }
+
 
 
 /* about us */
@@ -350,6 +405,11 @@ header {
             cursor: pointer;
         
         }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
     }
 
     img {
@@ -417,6 +477,11 @@ text-align: center;
         margin-top: 40px;
         cursor: pointer;
     
+    }
+
+    .toggle-btn:hover {
+        background-color: var(--secondary-color);
+        transition: all 0.3s ease;
     }
 }
 
@@ -511,6 +576,7 @@ text-align: center;
 .team .container .team-grid {
     display: flex;
     justify-content: center;
+    gap: 30px;
     
 
     .team-item {
@@ -530,6 +596,15 @@ text-align: center;
 
         p {
             line-height: 1.5;
+            font-weight: bold;
+        }
+
+        .team-description {
+            padding-top: 10px;
+            padding-right: 10%;
+            padding-left: 10%;
+            text-align: justify;
+            font-weight: normal;
         }
     }
 }
@@ -537,7 +612,7 @@ text-align: center;
 /* contact */
 
 .contact {
-    background-image: url('assets/images/modern-house-lighting.jpg');
+    background-image: url('assets/images/city\ night.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -546,7 +621,7 @@ text-align: center;
 
     display: flex;
     flex-direction: row;
-    background-color: #0000009c;
+    background-color: #2424248f;
     
 
     .contact-form {
@@ -579,6 +654,11 @@ text-align: center;
                 border-radius: 5px;
                 border-style: none;
             }
+
+            .btn-primary:hover {
+                background-color: var(--secondary-color);
+                transition: all 0.3s ease;
+            }
         }
     }
     
@@ -604,6 +684,7 @@ text-align: center;
             font-size: 25px;
             line-height: 1.5;
             margin-bottom: 10px;
+            font-family: 'roboto';
         }
     }
 }
@@ -703,11 +784,10 @@ a {
 /* Footer Bottom */
 .footer-bottom {
     text-align: center;
-    font-size: 0.9rem;
     border-top: 1px solid #ddd;
     padding-top: 10px;
     color: #666;
-    font-family: 'Lato';
+    font-family: 'roboto';
 }
 
 /* Container Styling */

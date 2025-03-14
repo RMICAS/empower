@@ -10,7 +10,7 @@ function toggleTeam() {
         button.textContent = 'SHOW LESS';
     } else {
         teamSection.style.display = 'none';
-        button.innerHTML = '<span class="plus-sign">+</span> FOR MORE PROJECTS';
+        button.innerHTML = 'OUR KEY PROJECTS';
     }
 }
 // nabar
@@ -33,3 +33,29 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
+// themes
+
+function applyThemeBasedOnHash() {
+  const hash = window.location.hash;
+
+  // Remove any previously applied theme class
+  document.body.classList.remove('theme-2', 'theme-3', 'theme-4');
+
+  // Apply the corresponding theme based on the URL hash
+  if (hash === '#theme-2') {
+    document.body.classList.add('theme-2');
+  } else if (hash === '#theme-3') {
+    document.body.classList.add('theme-3');
+  } else if (hash === '#theme-4') {
+    document.body.classList.add('theme-4');
+  } else {
+    // Default theme
+    document.body.classList.remove('theme-2', 'theme-3', 'theme-4');
+  }
+}
+
+// Call the function when the page loads or the hash changes
+window.onload = applyThemeBasedOnHash;
+window.onhashchange = applyThemeBasedOnHash;
+

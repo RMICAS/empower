@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        p {
+            line-height: 1.5;
+        }
+
+        @media (min-width: 490px) {
+
+.icon {
+display: none;
+}
+
+.mobile-ctn {
+display: none;
+}
+
+.carousel-container, .brands-title, .sdg-7-mobile {
+display: none;
+}
+
+#toggleButton {
+display: none;
+}
+
+#hamburger {
+display: none;
+}
+
+}
+
+.gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-item {
+            width: 300px;
+            margin: 10px;
+            background-color: aliceblue;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+
+        <!-- header top -->
+        <div class="header-top">
+            <i class="fas fa-bars" id="hamburger"></i>
+
+            <a href="index.html"><img src="assets/images/logo.png" alt="Empower Electrical Logo" class="logo"></a>
+        </div>
+
+        <!-- Header Section -->
+        <header class="header" id="header">
+            <div class="container">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html##about">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+    
+
+
+        <div class="w3-container w3-center w3-grey">
+            <h2 style="color: rgb(255, 255, 255);">Image Gallery</h2>
+        </div>
+        
+        <div class="w3-container gallery w3-grey">
+            <div class="w3-card w3-margin gallery-item">
+                <img src="/assets/images/gallery-1.jpeg" alt="Image 1" class="w3-image">
+                <div class="w3-container w3-center">
+                    <p>Nos dias 20 e 21 de Outubro de 2023, o 1º Seminário Internacional ASSAMBA contou com incríveis 
+                      palestras do ilustre @jaimepenastudio, o arquitecto colombiano baseado no México que foca em
+                       bioconstrução e que tem mais de 20 anos de experiência construindo com bambu.</p>
+                </div>
+            </div>
+        
+            <div class="w3-card w3-margin gallery-item">
+                <img src="/assets/images/gallery-2.jpeg" alt="Image 2" class="w3-image">
+                <div class="w3-container w3-center">
+                    <p>Na tarde do dia 19 de outubro, o 4º dia do Seminário Internacional ASSAMBA 2023, 
+                      nossos instrutores foram 2 convidados especiais vindos diretamente de Cabo Delgado:
+                       o Betinho e o Yamikane são artesãos que trabalham com bambu desde 2012.</p>
+                </div>
+            </div>
+        
+            <div class="w3-card w3-margin gallery-item">
+                <img src="/assets/images/gallery-3.jpeg" alt="Image 3" class="w3-image">
+                <div class="w3-container w3-center">
+                    <p>Depois de colher um broto de bambu na farma da ASSAMBA, na manhã do dia 19 de outubro de 2023 
+                      (4º dia de seminário), a nossa convidada especial Natália Reategui @natencomic deu uma aula teórica
+                       sobre os benefícios e particularidades do uso alimentício dos brotos de bambu.</p>
+                </div>
+            </div>
+        
+            
+        
+            
+        </div>
+
+
+        
+
+
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer-container">
+    <div class="footer-content">
+        <div class="footer-section-img">
+            <img src="assets/images/logo.png" width="100px" alt="logo">
+            <p style="color: #000;">Empower Electrical</p>
+            <div class="input-container">
+              <input type="email" class="email-input" placeholder="Enter your email address">
+              <button type="submit" class="email-submit-button">
+                <img src="assets/images/arrow.png" alt="icon" class="button-icon"></button>
+          </div>
+        </div>
+        <div class="footer-section">
+            <h3>LINKS</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#initiatives">Services</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="index.html#contact">Contacts</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>CONTACT</h3>
+            <ul>
+              <li><a href="index.html#contact" target="_blank">Contact Form</a></li>
+              <li><a href="privacy policy.html" target="_blank">Privacy Policy</a></li>
+          </ul>
+          
+        
+        </div>
+        <div class="footer-section">
+            <h3>SOCIAL</h3>
+            <ul>
+              <li><a href="#" target="_blank">Instagram</a></li>
+              <li><a href="#" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© Empower Electrical. All Rights Reserved 2024 </p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+if (window.scrollY > 50) { // Change 50 to the scroll position you prefer
+header.classList.add('scrolled');
+} else {
+header.classList.remove('scrolled');
+}
+});
+  </script>
+
+</body>
+</html>
