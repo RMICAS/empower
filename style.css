@@ -261,7 +261,7 @@ header {
 
 
 .service-card {
-    background-color: #faf3e0;
+    background-color: var(--background-color);
     padding: 20px;
     border-radius: 15px;
     border-style: var(--secondary-color);
@@ -334,7 +334,7 @@ header {
 /* about us */
 
 .about-us {
-    background-color: #FAF3E0;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: row;
     padding-top: 50px;
@@ -381,14 +381,6 @@ header {
                 }
             }
 
-            .ul-right {
-                img {
-                    
-                    width: 15px;
-                    margin-right: 10px;
-                    padding-top: 10px;
-                }
-            }
         }
 
         .btn-primary {
