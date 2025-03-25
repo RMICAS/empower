@@ -268,7 +268,7 @@ header {
     border-width: 1px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 350px;
-    height: 300px;
+    height: 460px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -504,10 +504,10 @@ text-align: center;
 
             .sdg-7-text {
                 text-align: left;
-                margin-top: 20px;
+                margin-top: 5px;
                 margin-left: 20px;
                 margin-right: 20px;
-                padding-top: 40px;
+                padding-top: 20px;
 
                 h3 {
                     font-size: 25px;
@@ -940,6 +940,7 @@ a {
 
    .services-section .service-card {
     width: 350px;
+    height: 450px;
    }
 
    .services-section .service-card-2 .service-2-icon {
@@ -1079,6 +1080,8 @@ a {
    .contact .container .contact-form {
     margin: 0px;
    }
+
+ 
 
    /* footer */
 

@@ -77,5 +77,35 @@ window.onhashchange = applyThemeBasedOnHash;
         });
     };
 
+    // email
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents the page from reloading
+  
+      const form = event.target;
+      const formData = new FormData(form);
+  
+      // Use Fetch API to send the form data to the server
+      fetch(form.action, {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => response.text()) // Assuming the server sends a success response
+      .then(responseText => {
+          // If the submission is successful, show the success message
+          document.getElementById('successMessage').style.display = 'block';
+  
+          // Optionally, hide the success message after a few seconds
+          setTimeout(() => {
+              document.getElementById('successMessage').style.display = 'none';
+          }, 3000); // Message disappears after 3 seconds
+      })
+      .catch(error => {
+          // Handle error if needed
+          console.error('Error:', error);
+      });
+  });
+  
+
 
 
